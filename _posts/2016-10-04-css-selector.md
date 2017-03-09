@@ -42,25 +42,26 @@ tags:
 
 例如，如果写作 ul em，这个语法就会选择从 ul 元素继承的所有 em 元素，而不论 em 的嵌套层次多深。
 因此，ul em 将会选择以下标记中的所有 em 元素：
->`<ul>`
-  >`<li>List item 1`
-    >`<ol>`
-      >`<li>List item 1-1</li>`
-      >`<li>List item 1-2</li>`
-      >`<li>List item 1-3`
-       >` <ol>`
-          >`<li>List item 1-3-1</li>`
-          >`<li>List item <em>1-3-2</em></li>`
-          >`<li>List item 1-3-3</li>`
-        >`</ol>`
-      >`</li>`
-      >`<li>List item 1-4</li>`
-    >`</ol>`
-  >`</li>`
-  >`<li>List item 2</li>`
-  >`<li>List item 3</li>`
->`</ul>``
-
+---
+<ul>
+  <li>List item 1
+    <ol>
+      <li>List item 1-1</li>
+      <li>List item 1-2</li>
+      <li>List item 1-3
+        <ol>
+          <li>List item 1-3-1</li>
+          <li>List item <em>1-3-2</em></li>
+          <li>List item 1-3-3</li>
+        </ol>
+      </li>
+      <li>List item 1-4</li>
+   </ol>
+  </li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ul>
+---
 3.相邻兄弟选择器，相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。
 
 ####选择相邻兄弟
@@ -69,18 +70,20 @@ tags:
 例如，如果要增加紧接在 h1 元素后出现的段落的上边距，可以这样写：
 h1 + p {margin-top:50px;}
 这个选择器读作：“选择紧接在 h1 元素后出现的段落，h1 和 p 元素拥有共同的父元素”。
->`<div>`
-  >`<ul>`
-    >`<li class="active">List item 1</li>`
-    >`<li>List item 2</li>`
-    >`<li>List item 3</li>`
-  >`</ul>`
-  >`<ol>`
-    >`<li>List item 1</li>`
-    >`<li>List item 2</li>`
-    >`<li>List item 3</li>`
-  >`</ol>`
->`</div>`
+---
+<div>
+  <ul>
+    <li class="active">List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ul>
+  <ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ol>
+</div>
+---
 在上面的片段中，div 元素中包含两个列表：一个无序列表，一个有序列表，每个列表都包含三个列表项。这两个列表是相邻兄弟，列表项本身也是相邻兄弟。不过，第一个列表中的列表项与第二个列表中的列表项不是相邻兄弟，因为这两组列表项不属于同一父元素（最多只能算堂兄弟）。
 请记住，用一个结合符只能选择两个相邻兄弟中的第二个元素。请看下面的选择器：
 
@@ -103,11 +106,13 @@ h1 + p {margin-top:50px;}
 |4.|E[att\|=val]|匹配所有att属性具有多个连字号分隔（hyphen-separated）的值、其中一个值以"val"开头的E元素，主要用于lang属性，比如"en"、"en-us"、"en-gb"等等|
 
 实例：
->p[title] { color:#f00; }
+---
+p[title] { color:#f00; }
 div[class=error] { color:#f00; }
 td[headers~=col1] { color:#f00; }
 p[lang|=en] { color:#f00; }
 blockquote[class=quote][cite] { color:#f00; }
+---
 
 ####4. CSS2.1中的伪类
 
@@ -122,12 +127,12 @@ blockquote[class=quote][cite] { color:#f00; }
 |7.|E:lang(c)|匹配lang属性等于c的E元素|
 
 实例：
-
+---
 >p:first-child { font-style:italic; }
 input[type=text]:focus { color:#000; background:#ffe; }
 input[type=text]:focus:hover { background:#fff; }
 q:lang(sv) { quotes: "\201D" "\201D" "\2019" "\2019"; }
-
+---
 ####5.CSS2.1中的伪元素
 
 |序号|选择器|含义|
@@ -138,7 +143,9 @@ q:lang(sv) { quotes: "\201D" "\201D" "\2019" "\2019"; }
 |4.|E:after|在E元素之后插入生成的内容|
 
 实例：
->p:first-line { font-weight:bold; color;#600; }
+---
+p:first-line { font-weight:bold; color;#600; }
 .preamble:first-letter { font-size:1.5em; font-weight:bold; }
 .cbb:before { content:""; display:block; height:17px; width:18px; background:url(top.png) no-repeat 0 0; margin:0 0 0 -18px; }
 a:link:after { content: " (" attr(href) ") "; }
+---
