@@ -2,16 +2,16 @@
 layout:     post
 title:      sublime 侧边栏中文显示有小方块"
 subtitle:   "sublime"
-date:       2015-10-22
+date:       2017-02-22
 author:     "Junhui"
-header-img: "img/sub.jpg"
+header-img: "img/bj.jpg"
 tags:
     - 前端开发
     - sublime
 ---
 Sublime 显示中文
-###中文文件名打开全是乱码，内容与装了插件无关，与屏幕dpi有关
-###在sublime text 3中，打开 Preferences-Settings-user，在括号内加入一行
+中文文件名打开全是乱码，内容与装了插件无关，与屏幕dpi有关
+在sublime text 3中，打开 Preferences-Settings-user，在括号内加入一行
 ~~~
 {
     "color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",

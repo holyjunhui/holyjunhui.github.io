@@ -4,13 +4,14 @@ title:      "关于git 无法commit的问题"
 subtitle:   "git process"
 date:       2017-03-02
 author:     "Junhui"
-header-img: "img/timg.gif"
+header-img: "img/bg.jpg"
 tags:
     - 前端开发
     - git
 ---
 
 ####关于git 无法commit问题
+
 ###commit时候出现以下提醒
 >$ Another git process seems to be running in this repository, e.g.
 
