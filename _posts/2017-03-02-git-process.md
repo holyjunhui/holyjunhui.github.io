@@ -10,9 +10,9 @@ tags:
     - git
 ---
 
-####关于git 无法commit问题
+#### 关于git 无法commit问题
 
-###commit时候出现以下提醒
+##### commit时候出现以下提醒
 >$ Another git process seems to be running in this repository, e.g.
 
 >an editor opened by 'git commit'. Please make sure all processes 

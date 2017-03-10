@@ -10,7 +10,7 @@ tags:
     - css
 ---
 
-###如何居中一个div
+### 如何居中一个div
 1. 水平居中：给div设置一个宽度，然后添加margin：0 auto；
 ~~~
  div {
